@@ -1,0 +1,32 @@
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  width: 1440px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.wrapper {
+  width: 200px;
+}
+
+.wrapper__1 {
+  color: green;
+}
+
+.wrapper__ {
+  color: pink;
+}

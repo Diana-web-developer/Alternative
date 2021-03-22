@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,700&display=swap&subset=cyrillic-ext");
+@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,700&display=swap&subset=cyrillic-ext);
+@import url(https://fonts.googleapis.com/css?family=Black+Han+Sans:regular);
+@import "fonts";
+$fontFamily:"PT Sans";
+
+
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+}
+.container {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+
+.wrapper {
+    width: 200px;
+		&__1 {
+            color: green;
+		}
+
+		&__ {
+            color: pink;
+		}
+}
