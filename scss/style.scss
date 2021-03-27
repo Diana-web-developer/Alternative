@@ -1,36 +1,196 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,700&display=swap&subset=cyrillic-ext");
-@import url(https://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,700&display=swap&subset=cyrillic-ext);
-@import url(https://fonts.googleapis.com/css?family=Black+Han+Sans:regular);
-@import "fonts";
-$fontFamily:"PT Sans";
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,700&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:regular");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,800,900");
+body {
+	font-family: "PT Sans";
+}
 
-
+$pink: rgb(187, 3, 103);
+$blue: rgb(11, 84, 157);
+$black: rgb(1, 29, 58);
+$gray: rgb(153, 153, 153);
 
 .wrapper {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
-	
 }
 .container {
-    width: 1200px;
-    position: relative;
-    margin: 0 auto;
-    padding-left: 30px;
+	max-width: 1200px;
+	position: relative;
+	margin: 0 auto;
+	padding-left: 30px;
 	padding-right: 30px;
 }
 
+.first {
+	background-image: url(../img/bg1.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
 
-
-.wrapper {
-    width: 200px;
-		&__1 {
-            color: green;
+.offer {
+	display: flex;
+	padding-top: 65px;
+	padding-bottom: 65px;
+	align-items: center;
+	justify-content: space-between;
+	h1 {
+		font-size: 50px;
+		line-height: 1;
+		font-weight: 400;
+		padding-bottom: 34px;
+		span {
+			font-size: 40px;
 		}
-
-		&__ {
-            color: pink;
+	}
+	.procedure {
+		font-size: 18px;
+		padding-bottom: 34px;
+	}
+	&__itself {
+		color: white;
+		flex: 0 1 50%;
+		a {
+			color: white;
+			padding-bottom: 34px;
+			border: 1px solid white;
+			padding: 7px 14px 7px 14px;
 		}
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		padding-bottom: 34px;
+	}
+	&__sum {
+		font-size: 40px;
+		padding-right: 15px;
+	}
+	&__seance {
+		font-size: 30px;
+		padding-right: 15px;
+	}
+	&__action {
+		font-size: 14px;
+		background-color: $pink;
+		padding: 5px 14px 7px 14px;
+		border-radius: 100%
+		;
+	}
+
+	&__form {
+		color: $black;
+		flex: 0 1 50%;
+		display: flex;
+		justify-content: flex-end;
+		form {
+			padding: 30px;
+			border-radius: 5px;
+			background-image: url(../img/bg-in-form.jpg);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			width: 350px;
+			height: 430px;
+			h3 {
+				font-size: 24px;
+				color: $black;
+				padding-bottom: 10px;
+			}
+			p {
+				font-size: 12px;
+				color: $gray;
+				padding-bottom: 30px;
+			}
+			.form__item {
+				padding: 0 0 20px 0;
+			}
+			label {
+				line-height: 2;
+			}
+			input {
+				display: block;
+				background-color: white;
+				border: 1px $gray solid;
+				width: 100%;
+				border-radius: 5px;
+				height: 49px;
+			}
+			a {
+				background-color: $blue;
+				color: white;
+				width: 100%;
+				height: 49px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 0 20px 0;
+				border-radius: 5px;
+			}
+			.conditions {
+				background: none;
+				color: $blue;
+				margin: 0;
+				width: auto;
+				height: auto;
+			}
+			.form {
+				display: flex;
+			}
+			.checkbox {
+				display: flex;
+				&__input {
+					display: none;
+				}
+
+				&__label {
+					font-size: 16px;
+					line-height: 140%;
+					display: inline-flex;
+					align-items: center;
+					position: relative;
+					cursor: pointer;
+					justify-content: space-between;
+					
+				}
+			}
+			
+			.checkbox__label::before {
+				content: "";
+				align-self: flex-start;
+				flex: 0 0 24px;
+				height: 24px;
+				background-color: #fff;
+				border-radius: 4px;
+				margin: 0px 10px 0px 0px;
+				border: $gray solid 1px;
+			}
+			.checkbox__label::after {
+				transition: transform 0.5s ease 0s;
+				content: "";
+				width: 16px;
+				height: 16px;
+				position: absolute;
+				top: 4px;
+				left: 4px;
+				background-color: #7a956b;
+				border-radius: 4px;
+				transform: scale(0);
+			}
+			.checkbox__input:checked + .checkbox__label::after {
+				transform: scale(1);
+			}
+		}
+	}
 }

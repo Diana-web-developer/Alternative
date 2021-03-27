@@ -1,3 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:regular,700&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Caption:regular,700&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Black+Han+Sans:regular");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,800,900");
+body {
+  font-family: "PT Sans";
+}
+
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -7,26 +15,239 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .container {
-  width: 1440px;
+  max-width: 1200px;
   position: relative;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.wrapper {
-  width: 200px;
+.first {
+  background-image: url(../img/bg1.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
-.wrapper__1 {
-  color: green;
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.wrapper__ {
-  color: pink;
+.offer h1 {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 400;
+  padding-bottom: 34px;
+}
+
+.offer h1 span {
+  font-size: 40px;
+}
+
+.offer .procedure {
+  font-size: 18px;
+  padding-bottom: 34px;
+}
+
+.offer__itself {
+  color: white;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.offer__itself a {
+  color: white;
+  padding-bottom: 34px;
+  border: 1px solid white;
+  padding: 7px 14px 7px 14px;
+}
+
+.offer__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 34px;
+}
+
+.offer__sum {
+  font-size: 40px;
+  padding-right: 15px;
+}
+
+.offer__seance {
+  font-size: 30px;
+  padding-right: 15px;
+}
+
+.offer__action {
+  font-size: 14px;
+  background-color: #bb0367;
+  padding: 5px 14px 7px 14px;
+  border-radius: 100%;
+}
+
+.offer__form {
+  color: #011d3a;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.offer__form form {
+  padding: 30px;
+  border-radius: 5px;
+  background-image: url(../img/bg-in-form.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 350px;
+  height: 430px;
+}
+
+.offer__form form h3 {
+  font-size: 24px;
+  color: #011d3a;
+  padding-bottom: 10px;
+}
+
+.offer__form form p {
+  font-size: 12px;
+  color: #999999;
+  padding-bottom: 30px;
+}
+
+.offer__form form .form__item {
+  padding: 0 0 20px 0;
+}
+
+.offer__form form label {
+  line-height: 2;
+}
+
+.offer__form form input {
+  display: block;
+  background-color: white;
+  border: 1px #999999 solid;
+  width: 100%;
+  border-radius: 5px;
+  height: 49px;
+}
+
+.offer__form form a {
+  background-color: #0b549d;
+  color: white;
+  width: 100%;
+  height: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 20px 0;
+  border-radius: 5px;
+}
+
+.offer__form form .conditions {
+  background: none;
+  color: #0b549d;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.offer__form form .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer__form form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.offer__form form .checkbox__input {
+  display: none;
+}
+
+.offer__form form .checkbox__label {
+  font-size: 16px;
+  line-height: 140%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.offer__form form .checkbox__label::before {
+  content: "";
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24px;
+          flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0px 10px 0px 0px;
+  border: #999999 solid 1px;
+}
+
+.offer__form form .checkbox__label::after {
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #7a956b;
+  border-radius: 4px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.offer__form form .checkbox__input:checked + .checkbox__label::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
