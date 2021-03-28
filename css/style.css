@@ -48,6 +48,10 @@ body {
           justify-content: space-between;
 }
 
+.offer .offer__itself {
+  padding-right: 20px;
+}
+
 .offer h1 {
   font-size: 50px;
   line-height: 1;
@@ -60,8 +64,9 @@ body {
 }
 
 .offer .procedure {
-  font-size: 18px;
+  font-size: 17px;
   padding-bottom: 34px;
+  line-height: 1.5;
 }
 
 .offer__itself {
@@ -156,10 +161,12 @@ body {
   width: 100%;
   border-radius: 5px;
   height: 49px;
+  padding: 0 15px 0 15px;
 }
 
 .offer__form form a {
-  background-color: #0b549d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0b549d), to(#3179b8));
+  background-image: linear-gradient(to right, #0b549d, #3179b8);
   color: white;
   width: 100%;
   height: 49px;
@@ -174,6 +181,13 @@ body {
           align-items: center;
   margin: 0 0 20px 0;
   border-radius: 5px;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.offer__form form a:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0b549d), to(#6cb8fa));
+  background-image: linear-gradient(to right, #0b549d, #6cb8fa);
 }
 
 .offer__form form .conditions {
@@ -241,7 +255,7 @@ body {
   position: absolute;
   top: 4px;
   left: 4px;
-  background-color: #7a956b;
+  background-color: #0b549d;
   border-radius: 4px;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -250,4 +264,53 @@ body {
 .offer__form form .checkbox__input:checked + .checkbox__label::after {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+@media (max-width: 767px) {
+  .offer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .offer .offer__itself {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .offer h1 {
+    font-size: calc(35px + 15 * ((100vw - 320px) / (1500 - 320)));
+    white-space: nowrap;
+  }
+  .offer h1 span {
+    font-size: calc(30px + 10 * ((100vw - 320px) / (1500 - 320)));
+  }
+  .offer .procedure {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .offer .offer__sum {
+    white-space: nowrap;
+    font-size: calc(30px + 10 * ((100vw - 320px) / (1500 - 320)));
+  }
+  .offer .offer__seance {
+    font-size: calc(20px + 10 * ((100vw - 320px) / (1500 - 320)));
+  }
+  .offer .offer__price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .offer__form form {
+    width: 280px;
+  }
 }
