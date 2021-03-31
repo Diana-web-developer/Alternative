@@ -201,6 +201,124 @@ $gray: rgb(153, 153, 153);
 		}
 	}
 }
+.popup:target {
+	opacity: 1;
+	visibility: visible;
+	/* display: block; */
+}
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(250, 250, 250, 0.5);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.5s ease 0s;
+	z-index: 5;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 10px;
+	position: relative;
+	z-index: 7;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+.popup__area {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.popup__content {
+	background: linear-gradient(to bottom right, #1e3d73, #2a5297);
+	color: white;
+	width: 350px;
+	height: 430px;
+	padding: 30px;
+	position: relative;
+	font-size: 20px;
+	line-height: 30px;
+	border-radius: 5px;
+}
+.popup__close {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	font-size: 20px;
+	color: white;
+	text-decoration: none;
+}
+.close-in-popup {
+	fill: white;
+	width: 15px;
+	height: 15px;
+}
+.popup__title {
+	font-size: 40px;
+	padding-top: 0;
+	padding-bottom: 40px;
+}
+.popup__text {
+	color: white;
+	font-size: 16px;
+}
+
+.second {
+}
+.main {
+	display: flex;
+	padding-top: 65px;
+	padding-bottom: 65px;
+	&__for-slider {
+		flex: 0 1 35%;
+	}
+
+	&__center {
+		flex: 0 1 35%;
+		.psy {
+			font-size: 20px;
+			font-weight: 500;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+			color: rgb(1, 29, 58);
+			line-height: 1;
+			text-align: left;
+			padding-bottom: 20px;
+		}
+		p {
+			font-size: 14px;
+			line-height: 1.5;
+		}
+		button {
+			color: $pink;
+		}
+		#more {
+			display: none;
+		}
+	}
+
+	&__for-paper {
+		flex: 0 1 30%;
+	}
+}
 
 @media (max-width: 767px) {
 	.offer {
@@ -210,6 +328,7 @@ $gray: rgb(153, 153, 153);
 		.offer__itself {
 			text-align: center;
 			margin-bottom: 40px;
+			padding-right: 0;
 		}
 		h1 {
 			font-size: calc(35px + 15 * ((100vw - 320px) / (1500 - 320)));
@@ -241,7 +360,10 @@ $gray: rgb(153, 153, 153);
 @media (max-width: 400px) {
 	.offer__form {
 		form {
-			width: 280px;
+			width: 100%;
 		}
+	}
+	.popup__content {
+		width: 100%;
 	}
 }
