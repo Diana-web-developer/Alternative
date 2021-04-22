@@ -1,41 +1,11 @@
-/*Обнуление*/
-/* *,*:before,*:after{
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
-} */
-/*Стили для демонстрации*/
-/* html,body{
-	height: 100%;
-	background-color: #333;
-	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	color: #fff;
-	font-size: 25px;
-}
-.wrapper{
-	height: 100%;
-	padding: 50px;
-	display: flex;
-	justify-content:center;
-	align-items: center;
-}
-
-@media (max-width:767px){
-	.wrapper{padding: 50px 10px;}
-} */
-
-/* Основные стили для всех слайдеров */
-
-/* Слайдер */
 .slick-slider {
 	min-width: 0;
-	width: 400px !important;
 }
 /* Ограничивающая оболочка */
 .slick-list {
 	overflow: hidden;
 	position: relative;
+	border-radius: 8px;
 }
 /* Лента слайдов */
 .slick-track {
@@ -43,39 +13,6 @@
 	align-items: flex-start;
 }
 
-/* Слайд */
-.slick-slide {
-}
-/* Слайд активный */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-
-/* Стрелка */
-.slick-arrow {
-}
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-}
-/* Стрелка вправо */
-.slick-arrow.slick-next {
-}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled {
-}
-
-/* Точки */
-.slick-dots {
-}
-.slick-dots li {
-}
-.slick-dots button {
-}
 
 
 /* Конкретный слайдер Наши специалисты */
@@ -85,7 +22,6 @@
 	flex: 0 1 35%;
 	min-width: 0;
 	z-index: 1;
-	
 }
 
 @media (max-width: 767px) {
@@ -96,25 +32,30 @@
 
 .slider-three-section .slick-arrow {
 	position: absolute;
-	bottom: -30px;
+	bottom: 0px;
 	z-index: 2;
 	font-size: 0;
-	width: 12px;
-	height: 20px;
-	border: none;
+	width: 50px;
+	height: 50px;
 }
 .slider-three-section .slick-arrow.slick-prev {
-	background: url("../img/white-arrow-left.png");
-	background-position: 0 0;
-background-repeat: no-repeat;
-background-size: 100% 100%;
+	right: 50px;
+	background: url("../img/arrow-left.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30% 40%;
+	border-radius: 8px 0px 0px 0px;
+	background-color: #bb0367;
 }
 .slider-three-section .slick-arrow.slick-next {
-	left: 50px;
-	background: url("../img/white-arrow-right.png");
-	background-position: 0 0;
-background-repeat: no-repeat;
-background-size: 100% 100%;
+	right: 0px;
+	background-image: url("../img/arrow-right.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 30% 40%;
+	border-radius: 0px 0px 8px 0px;
+	background-color: #bb0367;
+	/* border-left: solid white 1px; */
 }
 .slider-three-section .slick-arrow.slick-disabled {
 	opacity: 0.2;
@@ -145,11 +86,55 @@ background-size: 100% 100%;
 .slider-three-section .slider__item {
 	padding: 0px 0px;
 	/* margin: 0px 20px; */
+	border-radius: 8px;
 }
 .slider-three-section .slider__item img {
 	max-width: 100%;
 	position: relative;
 }
-.slider-three-section .slider__item.slick-center {
-}
 
+.star {
+	position: absolute;
+	top: 170px;
+	left: -170px;
+	width: 350px;
+}
+.for-rounded-rectangle {
+	position: absolute;
+	z-index: 2;
+	top: 300px;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	/* margin: 5px; */
+}
+.for-rounded-rectangle p {
+	position: relative;
+	z-index: 3;
+	text-align: center;
+}
+.more {
+	margin-top: 35px;
+	font-size: 18px;
+	color: rgb(1, 29, 58);
+}
+.ten {
+	font-size: 72px;
+	font-family: "Montserrat";
+	color: rgb(11, 84, 157);
+	font-weight: bold;
+}
+.years {
+	font-size: 20px;
+	color: rgb(11, 84, 157);
+	font-weight: bold;
+}
+.for-10 {
+	/* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.19); */
+	position: absolute;
+}
+.main__first {
+	min-width: 0;
+	flex: 0 1 35%;
+	position: relative;
+}

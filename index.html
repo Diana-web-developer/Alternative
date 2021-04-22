@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/null.css">
     <link rel="stylesheet" href="slick/css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Alternative</title>
 </head>
@@ -65,33 +66,39 @@
         <section class="second">
             <div class="container">
                 <div class="main">
-
-                    <div class="slider-three-section">
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
+                    <div class="main__first">
+                        <img src="img/star-round.gif" alt="#" class="star">
+                        <div class="for-rounded-rectangle">
+                            <img src="img/rounded-rectangle.png" alt="#" class="for-10">
+                            <div class="for-p">
+                                <p class="more">более</p>
+                                <p class="ten">10</p>
+                                <p class="years">лет опыта</p>
+                            </div>
                         </div>
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
-                        </div>
-                        <div class="slider__item filter">
-                            <img src="img/img1.jpg" alt="#">
+                        <div class="slider-three-section">
+                            <div class="slider__item filter">
+                                <img src="img/img1.jpg" alt="#">
+                            </div>
+                            <div class="slider__item filter">
+                                <img src="img/img1.jpg" alt="#">
+                            </div>
+                            <div class="slider__item filter">
+                                <img src="img/img1.jpg" alt="#">
+                            </div>
+                            <div class="slider__item filter">
+                                <img src="img/img1.jpg" alt="#">
+                            </div>
+                            <div class="slider__item filter">
+                                <img src="img/img1.jpg" alt="#">
+                            </div>
                         </div>
                     </div>
-                        
-                        
                     <div class="main__center">
                         <p class="psy">Psychiatric center</p>
                         <h2>Mutual aid</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque officia, nisi natus vel
+                        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque officia, nisi
+                            natus vel
                             aperiam eveniet laborum repellendus quia omnis ipsum quaerat minus nulla sapiente porro
                             beatae nihil velit incidunt?<span id="dots">...</span><span id="more"> Repudiandae,
                                 perferendis molestias. Fuga itaque magni quod rem.
@@ -101,6 +108,73 @@
 
                     </div>
                     <div class="main__for-paper">
+                        <!-- Images used to open the lightbox -->
+                        <div class="our-paper_see-all">
+                            <p class="our-paper">
+                                Our papers
+                            </p>
+                            <a href="#" class="see-all">see all</a>
+                        </div>
+                        <!-- <div class="row"> -->
+                        <div class="column column1">
+                            <img src="img/licence1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                        </div>
+                        <div class="column column2">
+                            <img src="img/licence2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                        </div>
+                        <div class="column column3">
+                            <img src="img/licence3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- The Modal/Lightbox -->
+                        <div id="myModal" class="modal">
+                            <span class="close cursor" onclick="closeModal()">&times;</span>
+                            <div class="modal-content">
+
+                                <div class="mySlides">
+                                    <div class="numbertext">1 / 3</div>
+                                    <img src="img/licence1.jpg" style="width:50%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">2 / 3</div>
+                                    <img src="img/licence2.jpg" style="width:50%">
+                                </div>
+
+                                <div class="mySlides">
+                                    <div class="numbertext">3 / 3</div>
+                                    <img src="img/licence3.jpg" style="width:50%">
+                                </div>
+
+                                <!-- Next/previous controls -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                                <!-- Caption text -->
+                                <div class="caption-container">
+                                    <!-- <p id="caption"></p> -->
+                                </div>
+
+                                <!-- Thumbnail image controls -->
+                                <div class="thumbnail-image-controls">
+                                    <div class="column thumbnail">
+                                        <img class="demo active" src="img/licence1.jpg" onclick="currentSlide(1)"
+                                            alt="Nature">
+                                    </div>
+
+                                    <div class="column thumbnail">
+                                        <img class="demo" src="img/licence2.jpg" onclick="currentSlide(2)" alt="Snow">
+                                    </div>
+
+                                    <div class="column thumbnail">
+                                        <img class="demo" src="img/licence3.jpg" onclick="currentSlide(3)"
+                                            alt="Mountains">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
 
                     </div>
 
@@ -143,6 +217,7 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="slick/js/slick.min.js"></script>
     <script src="slick/js/script.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
 </body>
 
