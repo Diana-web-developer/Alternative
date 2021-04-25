@@ -370,7 +370,7 @@ a:active {
   padding-bottom: 65px;
 }
 
-.main__for-slider {
+.main__first {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40%;
           flex: 0 1 40%;
@@ -403,6 +403,8 @@ a:active {
   font-size: 18px;
   line-height: 1.333;
   padding-bottom: 20px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .main__center button {
@@ -412,10 +414,14 @@ a:active {
   border-radius: 5px;
   width: 175px;
   height: 52px;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .main__center #more {
   display: none;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
 }
 
 .main__for-paper {
@@ -435,6 +441,18 @@ a:active {
           justify-content: space-between;
   position: relative;
   margin-left: 60px;
+}
+
+.main__for-paper .column1 .for-loupe {
+  width: 168px;
+  height: 243px;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url(../img/icons8-search.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
 }
 
 .our-paper_see-all {

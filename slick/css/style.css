@@ -102,7 +102,7 @@
 .for-rounded-rectangle {
 	position: absolute;
 	z-index: 2;
-	top: 300px;
+	top: 70%;
 	left: 0;
 	display: flex;
 	justify-content: center;
